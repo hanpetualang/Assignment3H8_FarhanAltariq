@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Suggestion</title>
+</head>
+<body>
+    <form autocomplete="off">
+        <input type="text" onkeyup="display(this)" id="inp">
+    </form>
+    <div id="suggestion">
+
+    </div>
+</body>
+
+<script>
+    var names = [
+        "Achmad Dinofaldi",
+        "Azdim Zul Fahmi",
+        "Baharudin Mulya",
+        "Bentar Raharja",
+        "Farhan Altariq",
+        "Feri Afrianto",
+        "Maulana Risqi",
+        "Neldy Wijaya",
+        "Rizdky Oktaviari",
+        "Tommy Ghazali",
+        "Zaidan Zulhakim"    
+    ]
+    function display(text){
+        document.getElementById("suggestion").innerHTML = "";
+        names.forEach(test);
+    }
+    function test(val){
+        var comparison = document.getElementById("inp").value;
+        if(val.toLowerCase().match(comparison.toLowerCase())){
+            //console.log(val)
+            document.getElementById("suggestion").innerHTML += "<br>" + val;
+        }
+    }
+</script>
+</html>
