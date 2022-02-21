@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">PRODUCT</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">INVENTORY</a></li>
+        </ul>
+    </div>
+    <!-- Desc -->
+    <div class="desc">
+        <div class="image">
+            <img width="200px" height="200px" src="https://img2.pngdownload.id/20180716/lra/kisspng-logo-person-user-person-icon-5b4d2bd2236ca6.6010202115317841461451.jpg" alt="" style="margin-right: 50px;">
+        </div>
+        <div class="info">
+            <h1 id="name">Farhan Altariq</h1>
+            <span id="role">
+                Back End Developer
+            </span>
+            <div class="btn">
+            <button id="ed" onclick="showForm()">Edit</button>
+            <button id="resume">Resume</button>
+            </div>
+        </div>
+        <div class="data-container">
+            <div class="data">
+                <span>Availability</span> <br> <br>
+                <span>Usia</span> <br> <br>
+                <span>Lokasi</span> <br> <br>
+                <span>Pengalaman</span> <br> <br>
+                <span>Email</span> <br> <br>
+            </div>
+            <div class="details">
+                <span id="avail">Full Time</span> <br> <br>
+                <span id="age">19</span> <br> <br>
+                <span id="loc">Madiun, Jawa Timur</span> <br> <br>
+                <span id="exp">1</span> <br> <br>
+                <span id="email">farhanaaxy@gmail.com</span> <br> <br>
+            </div>
+        </div>
+    </div>  
+    <br><br>
+    <!-- Input -->
+    <div class="form" id="field">
+        <form action="#">
+            <label>Nama</label>
+            <input id="nameInput" type="text" comment = "onkeyup='changeName()'" placeholder="Masukkan Nama Anda"><br>
+            <label>Role</label>
+            <select name="" id="roleInput" comment = "onchange='changeRole()'">
+                <option value="Back End Developer">Back End Developer</option>
+                <option value="Front End Developer">Front End Developer</option>
+            </select><br>
+            <label>Availability</label>
+            <input id="availInput" comment = "onkeyup='changeAvail()'" type="text"><br>
+            <label >Usia</label>
+            <input id="ageInput" comment = "onkeyup='changeAge()'" type="number"><br>
+            <label >Lokasi</label>
+            <input id="locInput" comment = "onkeyup='changeLoc()'" type="text"><br>
+            <label>Experience</label>
+            <input id="expInput" comment = "onkeyup='changeExp()'" type="number"><br>
+            <label>Email</label>
+            <input id="emailInput" comment = "onkeyup='changeEmail()'" type="email"><br>
+            <button type="submit" onclick='changeAllData()'>Submit</button>
+        </form>
+    </div>
+</body>
+<script src="function.js"></script>
+
+</html>
